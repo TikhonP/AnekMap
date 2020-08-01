@@ -132,5 +132,6 @@ dmypy.json
 *.DS_Store
 *.swp
 Analisys/182.zip
-Analisys/udpipe_syntagrus.model
-
+AnekServer/udpipe_syntagrus.model
+AnekServer/182.zip
+Analysis/all_aneks.json

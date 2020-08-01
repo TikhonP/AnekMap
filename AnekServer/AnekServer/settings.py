@@ -28,6 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.234.29',
+    '192.168.234.17',
+    '192.168.214.46',
+    '192.168.234.31',
+    '192.168.234.30',
+    '169.254.113.8',
+    '192.168.43.2',
 ]
 
 
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'anek',
 ]
@@ -52,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'AnekServer.urls'
@@ -74,14 +82,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'AnekServer.wsgi.application'
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'beermap',
+        'USER': 'beermapuser',
+        'PASSWORD': 'raspberry1',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
