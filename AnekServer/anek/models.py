@@ -13,5 +13,9 @@ class Anek(models.Model):
     )
     topic = models.CharField(max_length=2, choices=TOPICS_CHOISES, null=True)
 
+    # like_count = models.IntegerField()
+    # views_count = models.IntegerField()
+
+
     def __str__(self):
         return '{} | {}'.format(self.text[:20], self.topic)

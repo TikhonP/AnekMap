@@ -131,3 +131,6 @@ dmypy.json
 
 *.DS_Store
 *.swp
+Analisys/182.zip
+Analisys/udpipe_syntagrus.model
+
